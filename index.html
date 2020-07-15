@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="referrer" content="never" />
+    <link href="//cdn.bootcss.com/nprogress/0.2.0/nprogress.min.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <!--[if lt IE 9]>
+    <script src="//cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <![endif]-->
+    <script src="//cdn.bootcss.com/jquery/1.7.1/jquery.min.js"></script>
+    <script src="//cdn.bootcss.com/nprogress/0.2.0/nprogress.min.js"></script>
+    <title>我的读书</title>
+</head>
+
+<body>
+    <div id="clickload">假装异步加载中...</div>
+    <div id="wrap">
+        <section id="content" class="page">
+            <article class="post">
+                <div class="con">
+                    <article>
+                        <div id="archives">
+                            <div id="douban">
+                                <div id="book-reading-wrap"></div>
+                                <div id="book-read-wrap"></div>
+                                <div id="book-wish-wrap"></div>
+                            </div>
+                        </div>
+                    </article>
+                    <script type="text/javascript" src="douban.api.js"></script>
+                    <script type="text/javascript">
+                        var dbapi = new DoubanApi();
+                        $(document).ready(function () {
+                            dbapi.show();
+                        });
+                    </script>
+                </div>
+            </article>
+            <div class="clear"></div>
+        </section>
+        <div class="clear"></div>
+    </div>
+    <script type="text/javascript" src="base.js"></script>
+</body>
+
+</html>
